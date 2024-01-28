@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 public class SelectionSort  {
-    private static boolean less(Comparable v, Comparable w) {
+    private static <T extends Comparable<T>>boolean less(T v, T w) {
         return v.compareTo(w) < 0;
         /*The compareTo method is a method defined in the Comparable interface in Java.
         It is used to compare two objects for the purpose of sorting.
@@ -14,19 +14,19 @@ public class SelectionSort  {
         If the current object is equal to the specified object, compareTo returns 0.
         If the current object is greater than the specified object, compareTo returns a positive integer.*/
     }
-    private static void swap(Comparable[] a, int i, int j)
+    private static <T extends Comparable<T>> void swap(T[] a, int i, int j)
     {
-        Comparable swap = a[i];
+        T swap = a[i];
         a[i] = a[j];
         a[j] = swap;
     }
-    private static boolean isSorted(Comparable[] a)
+    private static <T extends Comparable<T>> boolean isSorted(T[] a)
     {
         for (int i = 1; i < a.length; i++)
             if (less(a[i], a[i-1])) return false;
         return true;
     }
-    public static void sort(Comparable[] a)
+    public static <T extends Comparable<T>> void sort(T[] a)
     {
         int N = a.length;
         for (int i = 0; i < N; i++)

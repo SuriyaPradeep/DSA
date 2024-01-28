@@ -2,15 +2,15 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Shuffling {
-    private static void swap(Comparable[] arr, int i, int j){
-        Comparable temp=arr[i];
+    private static <T extends Comparable<T>> void swap(T[] arr, int i, int j){
+        T temp=arr[i];
         arr[i]=arr[j];
         arr[j]=temp;
     }
-    private static boolean less(Comparable a,Comparable b){
+    private static <T extends Comparable<T>> boolean less(T a,T b){
         return a.compareTo(b)<0;
     }
-    private static boolean isSorted(Comparable[] arr){
+    private static <T extends Comparable<T>> boolean isSorted(T[] arr){
         for(int i=1;i< arr.length;i++){
             if(less(arr[i],arr[i-1])){
                 return false;
@@ -18,7 +18,7 @@ public class Shuffling {
         }
         return true;
     }
-    public static void shuffle(Comparable[] arr){
+    public static <T extends Comparable<T>>void shuffle(T[] arr){
         Random random = new Random();
         for(int i=0;i<arr.length;i++){
             int r= random.nextInt(0,i+1);
