@@ -23,11 +23,17 @@ public class BubbleSort {
     }
     public static <T extends Comparable<T>> void sort(T[] arr){
         int n=arr.length;
+        boolean swap=false;
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
                 if(less(arr[j],arr[i])){
                     swap(arr,i,j);
+                    swap=true;
                 }
+            }
+            if (!swap){
+                System.out.println("Array is Sorted");
+                break;
             }
         }
     }
@@ -41,5 +47,8 @@ public class BubbleSort {
         sort(stringArr);
         System.out.println(isSorted(stringArr));
         System.out.println(Arrays.toString(stringArr));
+        Integer[] arr_sorted={1,2,3,4,5,6,7,8,9,10};
+        sort(arr_sorted);
+        System.out.println(Arrays.toString(arr_sorted));
     }
 }
