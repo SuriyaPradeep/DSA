@@ -15,5 +15,6 @@ public class Main {
         System.out.println();
         System.out.println("Popped:"+stack.pop());
         System.out.println("Popped:"+stack.pop());
+        System.out.println("Stack size:"+stack.getSize());
     }
 }

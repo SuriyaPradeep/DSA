@@ -33,6 +33,7 @@ public class LinkedStack<Item> implements Iterable<Item>{
             throw new NoSuchElementException("Stack underflow");
         }
         head=head.next;
+        size--;
         return current.item;
     }
     public int getSize(){

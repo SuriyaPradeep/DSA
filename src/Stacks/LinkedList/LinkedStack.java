@@ -30,6 +30,7 @@ public class LinkedStack {
             return "Empty Stack";
         }
         head=head.next;
+        size--;
         return current.item;
     }
     public int getSize(){

@@ -32,6 +32,7 @@ public class LinkedGenericStacks<Item> {
             throw new NoSuchElementException("Stack underflow");
         }
         head=head.next;
+        size--;
         return current.item;
     }
     public int getSize(){
