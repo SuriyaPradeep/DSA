@@ -52,6 +52,7 @@ public class MergeSort<T extends Comparable<T>> {
        }
    }
    public void mergerSort(T[] arr,int beg,int end){
+        //Checks for base condition
         if(beg<end){
             int mid=(beg+end)/2;
             mergerSort(arr,beg,mid);
@@ -63,7 +64,6 @@ public class MergeSort<T extends Comparable<T>> {
     // Main method to test the MergeSort class
     public static void main(String[] args) {
         Integer[] arr = {12, 11, 13, 5, 6, 7};
-        int n=arr.length;
         MergeSort<Integer> ms1 = new MergeSort<>();
         System.out.println(ms1.isSorted(arr));
         ms1.sort(arr);
