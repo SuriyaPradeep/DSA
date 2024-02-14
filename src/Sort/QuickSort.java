@@ -5,9 +5,6 @@ import java.util.Random;
 
 public class QuickSort<T extends Comparable<T>> {
     public  boolean less(T a,T b){
-        if (a == b) {
-            return false;
-        }
         return a.compareTo(b)<0;
     }
     public  void swap(T[] arr,int i,int j){
@@ -63,7 +60,7 @@ public class QuickSort<T extends Comparable<T>> {
         return j;
     }
     public void sort(T[] arr){
-        shuffle(arr);
+        shuffle(arr);//Shuffle in order to avoid worst case
         sort(arr,0,arr.length-1);
         System.out.println(isSorted(arr));
     }
