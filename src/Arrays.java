@@ -9,7 +9,7 @@ public class Arrays {
         System.out.println(Search(0));
         insert(35,4,5);
         insert(25,3,6);
-        insert(50,7,7);
+        insert(50,7,7);q
         insert(60,8,8);
         insert(70,9,9);
         traverse();
