@@ -7,6 +7,7 @@ public class ArrayOrdered<T extends Comparable<T>> implements Iterable<T> {
     private  T[] pq;
     private  int size;
     public ArrayOrdered(){
+        this.size=0;
         this.pq=(T[]) new Comparable[1];
     }
     private  void resize(int capacity){
