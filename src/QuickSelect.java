@@ -55,12 +55,12 @@ public class QuickSelect <T extends Comparable<T>>{
                 break;
             }
         }
-        return arr[k];
+        return arr[k-1];
     }
     public static void main(String[] args) {
         QuickSelect<Integer> qs1=new QuickSelect<>();
         Integer[] arr={12,11,13,5,6,7};
-        System.out.println(qs1.quickSelect(arr,1));//Should return 2nd smallest element ie 6
+        System.out.println(qs1.quickSelect(arr,2));//Should return 2nd smallest element ie 6
     }
 
 }
