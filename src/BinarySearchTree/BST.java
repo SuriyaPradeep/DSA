@@ -18,6 +18,9 @@ public class BST<T extends Comparable<T>> {
     public BST() {
         root = null;
     }
+    public BST(T value){
+        root=insert(root,value);
+    }
 
     public int size() {
         return size(root);
